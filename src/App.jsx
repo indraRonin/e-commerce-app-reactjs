@@ -1,19 +1,22 @@
-import Card from './Card'
+
 import './App.css'
+import { Routes, Route, Link } from 'react-router-dom';
+import Home from './Home.jsx';
+import Orders from './Orders.jsx';
 
 function App() {
 
   return (
-    <div className='card-container'>
-      <Card productName="Air Conditioner" productPrice="Rs 29,999" image="./src/assets/airconditioner.png"/>
-      <Card productName="Atomic Habits Paperback" productPrice="Rs 349" image="./src/assets/book.png" />
-      <Card productName="Web Cam" productPrice="Rs 1,499" image="./src/assets/camera.png" />
-      <Card productName="Coffe Mug" productPrice="Rs 599" image="./src/assets/coffeemug.png" />
-      <Card productName="Iphone Cover" productPrice="Rs 679" image="./src/assets/cover.png" />
-      <Card productName="Gaming Headset" productPrice="Rs 1,849" image="./src/assets/headphone.png" />
-      <Card productName="Wired Mouse" productPrice="Rs 699" image="./src/assets/mouse.png" />
-      <Card productName="Extended Mousepad" productPrice="Rs 599" image="./src/assets/mousepad.png" />
-      <Card productName="Titan Automatic Watch" productPrice="Rs 14,999" image="./src/assets/watch.png" />
+    <div>
+      <nav className='navbar'>
+        <Link to="/">Home</Link>
+        <Link to="/orders">Orders</Link>
+      </nav>
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/orders" element={<Orders />} />
+      </Routes>
     </div>
   )
 }

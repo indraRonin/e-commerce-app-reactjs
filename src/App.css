@@ -16,3 +16,19 @@ body {
   padding: 2rem;
   flex-grow: 1;
 }
+
+.navbar {
+  display: flex;
+  background-color: rgb(226, 169, 169);
+}
+.navbar a{
+  display: block;
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+  padding: 20px 16px;
+}
+
+.navbar a:hover{
+  background-color: #e4c1c1;
+}
